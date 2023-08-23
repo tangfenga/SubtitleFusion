@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>SubtitleFusion</title>
+</head>
+<body>
+    <div id="SubtitleFusionConfigPage" data-role="page" class="page type-interior pluginConfigurationPage"
+        data-require="emby-input,emby-button,emby-select,emby-checkbox">
+        <div data-role="content">
+            <div class="content-primary">
+                <div class="verticalSection verticalSection">
+                    <div class="sectionTitleContainer flex align-items-center">
+                        <h2 class="sectionTitle">SubtitleFusion配置</h2><span id="Version" name="Version"
+                            is="emby-linkbutton" class="emby-button"></span>
+                    </div>
+                </div>
+                <form id="SubtitleFusionConfigForm">
+
+                    <div class="checkboxContainer checkboxContainer-withDescription">
+                        <label class="emby-checkbox-label">
+                            <input id="Enable" name="EnableBox" type="checkbox" is="emby-checkbox" />
+                            <span>是否启用</span>
+                        </label>
+                    </div>
+
+                    <div class="inputContainer">
+                        <label class="inputLabel inputLabelUnfocused" for="MasterRegex">主弹幕正则</label>
+                        <input id="MasterRegex" name="MasterRegex" type="text" is="emby-input" />
+                        <div class="fieldDescription">匹配视频中的弹幕文件</div>
+                    </div>
+
+                    <div class="inputContainer">
+                        <label class="inputLabel inputLabelUnfocused" for="Interval">任务间隔(s)</label>
+                        <input id="Interval" name="Interval" type="number" is="emby-input" min="60" />
+                        <div class="fieldDescription">没什么卵用</div>
+                    </div>
+
+                    <div>
+                        <button is="emby-button" type="submit" class="raised button-submit block emby-button">
+                            <span>保存</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var SubtitleFusionConfig = {
+                pluginUniqueId: 'd71ced18-5ac6-4b3e-b86f-c49242bf4dc1'
+            };
+
+            document.querySelector('#SubtitleFusionConfigPage')
+                .addEventListener('pageshow', function() {
+                    Dashboard.showLoadingMsg();
+                    ApiClient.getPluginConfiguration(SubtitleFusionConfig.pluginUniqueId).then(function (config) {
+                        document.querySelector('#Version').value = config.Version;
+                        document.querySelector('#Enable').value = config.Enable;
+                        document.querySelector('#MasterRegex').checked = config.MasterRegex;
+                        document.querySelector('#Interval').value = config.Interval;
+                        Dashboard.hideLoadingMsg();
+                    });
+                });
+
+            document.querySelector('#SubtitleFusionConfigForm')
+                .addEventListener('submit', function(e) {
+                Dashboard.showLoadingMsg();
+                ApiClient.getPluginConfiguration(SubtitleFusionConfig.pluginUniqueId).then(function (config) {
+                    config.Version = document.querySelector('#Version').value;
+                    config.Enable = document.querySelector('#Enable').checked;
+                    config.MasterRegex = document.querySelector('#MasterRegex').value;
+                    config.Interval = document.querySelector('#Interval').value;
+                    ApiClient.updatePluginConfiguration(SubtitleFusionConfig.pluginUniqueId, config).then(function (result) {
+                        Dashboard.processPluginConfigurationUpdateResult(result);
+                    });
+                });
+
+                e.preventDefault();
+                return false;
+            });
+        </script>
+    </div>
+</body>
+</html>

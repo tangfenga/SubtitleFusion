@@ -1,0 +1,12 @@
+D:\Projects\C#\Jellyfin.Plugin.SubtitleFusion\bin\Debug\net6.0\Jellyfin.Plugin.SubtitleFusion.deps.json
+D:\Projects\C#\Jellyfin.Plugin.SubtitleFusion\bin\Debug\net6.0\Jellyfin.Plugin.SubtitleFusion.dll
+D:\Projects\C#\Jellyfin.Plugin.SubtitleFusion\bin\Debug\net6.0\Jellyfin.Plugin.SubtitleFusion.pdb
+D:\Projects\C#\Jellyfin.Plugin.SubtitleFusion\obj\Debug\net6.0\Jellyfin.Plugin.SubtitleFusion.csproj.AssemblyReference.cache
+D:\Projects\C#\Jellyfin.Plugin.SubtitleFusion\obj\Debug\net6.0\Jellyfin.Plugin.SubtitleFusion.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\C#\Jellyfin.Plugin.SubtitleFusion\obj\Debug\net6.0\Jellyfin.Plugin.SubtitleFusion.AssemblyInfoInputs.cache
+D:\Projects\C#\Jellyfin.Plugin.SubtitleFusion\obj\Debug\net6.0\Jellyfin.Plugin.SubtitleFusion.AssemblyInfo.cs
+D:\Projects\C#\Jellyfin.Plugin.SubtitleFusion\obj\Debug\net6.0\Jellyfin.Plugin.SubtitleFusion.csproj.CoreCompileInputs.cache
+D:\Projects\C#\Jellyfin.Plugin.SubtitleFusion\obj\Debug\net6.0\Jellyfin.Plugin.SubtitleFusion.dll
+D:\Projects\C#\Jellyfin.Plugin.SubtitleFusion\obj\Debug\net6.0\refint\Jellyfin.Plugin.SubtitleFusion.dll
+D:\Projects\C#\Jellyfin.Plugin.SubtitleFusion\obj\Debug\net6.0\Jellyfin.Plugin.SubtitleFusion.pdb
+D:\Projects\C#\Jellyfin.Plugin.SubtitleFusion\obj\Debug\net6.0\ref\Jellyfin.Plugin.SubtitleFusion.dll
