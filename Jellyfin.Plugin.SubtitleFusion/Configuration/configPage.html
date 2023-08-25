@@ -54,8 +54,8 @@
                     Dashboard.showLoadingMsg();
                     ApiClient.getPluginConfiguration(SubtitleFusionConfig.pluginUniqueId).then(function (config) {
                         document.querySelector('#Version').value = config.Version;
-                        document.querySelector('#Enable').value = config.Enable;
-                        document.querySelector('#MasterRegex').checked = config.MasterRegex;
+                        document.querySelector('#Enable').checked = config.Enable;
+                        document.querySelector('#MasterRegex').value = config.MasterRegex;
                         document.querySelector('#Interval').value = config.Interval;
                         Dashboard.hideLoadingMsg();
                     });
