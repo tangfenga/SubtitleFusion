@@ -9,6 +9,14 @@
         "imageUrl": "",
         "versions": [
             {
+                "version": "1.0.1",
+                "changelog": "增加了一些bug",
+                "targetAbi": "10.8.0.0",
+                "sourceUrl": "https://github.com/tangfenga/SubtitleFusion/releases/download/1.0.1/Jellyfin.Plugin.SubtitleFusion-1.0.1.zip",
+                "checksum": "ebf2d90986feba1042a4111de2ced2cb",
+                "timestamp": "2023-08-25T11:11:13"
+            },
+            {
                 "version": "1.0.0",
                 "changelog": "首次发布，我知道写中文会乱码，我不在乎",
                 "targetAbi": "10.8.0.0",
